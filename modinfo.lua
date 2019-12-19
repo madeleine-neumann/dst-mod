@@ -1,7 +1,7 @@
 name = "Buddelkiste Prefab"
 description = "Console: TheWorld.Clean()"
 author = "MissN"
-version = "1.11"
+version = "1.13"
 version_compatible = "1.0.8"
 priority = -9000.548701789473201784320170431
 
@@ -373,7 +373,7 @@ configuration_options =
 		label = "Custom edible prefabs",
 		options = {
 			{description = "default",   data = ""},
-			{description = "example",   data = "torch, mosquitosack, pinecone, trinket_1, trinket_2, trinket_3, trinket_4, trinket_5, trinket_6, trinket_7, trinket_8, trinket_9, trinket_10, trinket_11, trinket_12, trinket_13, trinket_14, trinket_15, stinger, haundstooth, feather_robin, feather_crow, feather_rob"},
+			{description = "example",   data = "torch,mosquitosack,pinecone,trinket_1,trinket_2,trinket_3,trinket_4,trinket_5,trinket_6,trinket_7,trinket_8,trinket_9,trinket_10,trinket_11,trinket_12,trinket_13,trinket_14,trinket_15,stinger,haundstooth,feather_crow,feather_robin_winter,beefalowool,silk,foliage,boneshard,berries,berries_cooked"},
 		},
 			default = "",
 	}

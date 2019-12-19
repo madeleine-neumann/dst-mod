@@ -1,7 +1,7 @@
 name = "Buddelkiste Prefab"
 description = "Console: TheWorld.Clean()"
 author = "MissN"
-version = "1.0"
+version = "1.2"
 version_compatible = "1.0.8"
 priority = -9000.548701789473201784320170431
 

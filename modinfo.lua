@@ -1,7 +1,7 @@
 name = "Buddelkiste Prefab"
 description = "Console: TheWorld.Clean()"
 author = "MissN"
-version = "1.2"
+version = "1.9"
 version_compatible = "1.0.8"
 priority = -9000.548701789473201784320170431
 
@@ -372,10 +372,10 @@ configuration_options =
 		name = "Custom_edible_prefabs",
 		label = "Custom edible prefabs",
 		options = {
-			{description = "",   data = ""},
-			{description = "",   data = ""},
+			{description = "default",   data = ""},
+			{description = "example",   data = "flint, log"},
 		},
-			default = "",
+			default = "default",
 	}
 
 }

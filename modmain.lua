@@ -141,9 +141,9 @@ local function bait_prefab_big(inst, tag)
 end
 
 local cust_edible_prefabs_str = GetModConfigData("Custom_edible_prefabs")
-local prefabs = {cust_edible_prefabs_str}
+local prefabs = cust_edible_prefabs_str:astro_split(",")
 
-local prefabs_big = {"torch"}
+local prefabs_big = {"torch", "log"}
 
 
 function set_eaters()

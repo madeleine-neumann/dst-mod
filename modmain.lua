@@ -19,8 +19,8 @@ function string.astro_split(str, pat)
       s, e, cap = str:find(fpat, last_end)
    end
    if last_end <= #str then
-      cap = str:sub(last_end)
-      table.insert(t, cap)
+    cap = str:sub(last_end)
+    table.insert(t, cap)
    end
    return t
 end
@@ -45,7 +45,7 @@ function CleanPrefab(prefab, count)
     for k,v in pairs(GLOBAL.Ents) do
         if v.prefab == prefab then
             if not IsInInventory(v) then
-        	   table.insert(b, v)
+                table.insert(b, v)
             end
         end
     end
@@ -56,8 +56,8 @@ function CleanPrefab(prefab, count)
 
     for k,v in pairs(b) do
         if N <= count then break end
-    	v:Remove()
-    	N = N-1
+        v:Remove()
+        N = N-1
     end
 
 end
@@ -74,7 +74,7 @@ function DoClean()
 
     c_announce(GetModConfigData("Cleaning_text"))
     local prefabs = {"lavae","bee","killerbee","slurper","flower","babybeefalo","beefalo","beefaloherd",
-     "spiderden", "spider","spider_warrior","spoiled_food","carrot_planted","krampus", "skeleton_player", "hound", "rabbit"}
+     "spiderden", "spider","spider_warrior","spoiled_food","carrot_planted","krampus", "skeleton_player", "rabbit"}
 
     local cust_prefabs_str = GetModConfigData("Custom_prefabs")
 

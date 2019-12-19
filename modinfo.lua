@@ -375,7 +375,7 @@ configuration_options =
 			{description = "default",   data = ""},
 			{description = "example",   data = "flint, log"},
 		},
-			default = "default",
+			default = "",
 	}
 
 }

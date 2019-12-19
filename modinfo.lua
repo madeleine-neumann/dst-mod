@@ -366,6 +366,16 @@ configuration_options =
 			{description = "",   data = ""},
 		},
 			default = "",
+	},
+
+	{
+		name = "Custom_edible_prefabs",
+		label = "Custom edible prefabs",
+		options = {
+			{description = "",   data = ""},
+			{description = "",   data = ""},
+		},
+			default = "",
 	}
 
 }

@@ -60,6 +60,16 @@ configuration_options =
 	},
 
 	{
+		name = "birds_eat_things",
+		label = "Only Birds eat items",
+		options = {
+			{description = "yes",data = "yes"},
+			{description = "no",   data = "no"},
+		},
+			default = "yes",
+	},
+
+	{
 		name = "lavae_Amount",
 		label = "Max amount of lavaes",
 		options = {

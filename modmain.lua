@@ -193,9 +193,45 @@ function set_eaters()
     end)
 end
 
+function set_bird_eaters()
+
+    for i, prefab in ipairs(prefabs) do
+        AddPrefabPostInit(prefab, bait_prefab_gems)
+    end
+
+    for i, prefab in ipairs(prefabs_big) do
+        AddPrefabPostInit(prefab, bait_prefab_big)
+    end
+
+
+    AddPrefabPostInit("robin",function(inst)
+        if inst.components.eater == nil then return end
+            if inst.components.eater.preferseating then
+                    table.insert(inst.components.eater.preferseating,"GEMS")
+                    table.insert(inst.components.eater.caneat,"GEMS")
+            else
+                    table.insert(inst.components.eater.foodprefs,"GEMS")
+            end
+    end)
+
+    AddPrefabPostInit("robin_winter",function(inst)
+        if inst.components.eater == nil then return end
+            if inst.components.eater.preferseating then
+                    table.insert(inst.components.eater.preferseating,"GEMS")
+                    table.insert(inst.components.eater.caneat,"GEMS")
+            else
+                    table.insert(inst.components.eater.foodprefs,"GEMS")
+            end
+    end)
+end
+
 
 if GetModConfigData("eat_things") == "yes" then
     set_eaters()
+end;
+
+if GetModConfigData("birds_eat_things") == "yes" then
+    set_bird_eaters()
 end;
 
 

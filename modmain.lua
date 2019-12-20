@@ -143,10 +143,10 @@ end
 local cust_edible_prefabs_str = GetModConfigData("Custom_edible_prefabs")
 local prefabs = cust_edible_prefabs_str:astro_split(",")
 
-local prefabs_big = {"torch", "log"}
+local prefabs_big = {""}
 
 
-function set_eaters()
+function set_rabbit_eaters()
 
     for i, prefab in ipairs(prefabs) do
         AddPrefabPostInit(prefab, bait_prefab_gems)
@@ -155,27 +155,6 @@ function set_eaters()
     for i, prefab in ipairs(prefabs_big) do
         AddPrefabPostInit(prefab, bait_prefab_big)
     end
-
-
-    AddPrefabPostInit("robin",function(inst)
-        if inst.components.eater == nil then return end
-            if inst.components.eater.preferseating then
-                    table.insert(inst.components.eater.preferseating,"GEMS")
-                    table.insert(inst.components.eater.caneat,"GEMS")
-            else
-                    table.insert(inst.components.eater.foodprefs,"GEMS")
-            end
-    end)
-
-    AddPrefabPostInit("robin_winter",function(inst)
-        if inst.components.eater == nil then return end
-            if inst.components.eater.preferseating then
-                    table.insert(inst.components.eater.preferseating,"GEMS")
-                    table.insert(inst.components.eater.caneat,"GEMS")
-            else
-                    table.insert(inst.components.eater.foodprefs,"GEMS")
-            end
-    end)
 
     AddPrefabPostInit("rabbit",function(inst)
         if inst.components.eater == nil then return end
@@ -226,14 +205,13 @@ function set_bird_eaters()
 end
 
 
-if GetModConfigData("eat_things") == "yes" then
-    set_eaters()
+if GetModConfigData("rabbits_eat_things") == "yes" then
+    set_rabbit_eaters()
 end;
 
 if GetModConfigData("birds_eat_things") == "yes" then
     set_bird_eaters()
 end;
-
 
 AddComponentPostInit("herd", function(inst)
     local old_OnRemoveEntity = inst.OnRemoveEntity

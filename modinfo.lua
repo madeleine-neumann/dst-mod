@@ -1,7 +1,7 @@
 name = "Buddelkiste Prefab"
 description = "Console: TheWorld.Clean()"
 author = "MissN"
-version = "1.13"
+version = "1.15"
 version_compatible = "1.0.8"
 priority = -9000.548701789473201784320170431
 
@@ -50,23 +50,23 @@ configuration_options =
 	},
 
 	{
-		name = "eat_things",
-		label = "Birds and rabbits eat items",
+		name = "rabbits_eat_things",
+		label = "Rabbits can eat custom items",
 		options = {
 			{description = "yes",data = "yes"},
 			{description = "no",   data = "no"},
 		},
-			default = "yes",
+			default = "no",
 	},
 
 	{
 		name = "birds_eat_things",
-		label = "Only Birds eat items",
+		label = "Birds can eat custom items",
 		options = {
 			{description = "yes",data = "yes"},
 			{description = "no",   data = "no"},
 		},
-			default = "yes",
+			default = "no",
 	},
 
 	{
